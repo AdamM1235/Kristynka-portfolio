@@ -40,3 +40,13 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
   });
+  function toggleMobileMenu() {
+    var mobileMenu = document.querySelector('.mobile-menu');
+    mobileMenu.classList.toggle('show-mobile-menu');
+}
+window.addEventListener('scroll', function() {
+  var mobileMenu = document.querySelector('.mobile-menu');
+  if (mobileMenu.classList.contains('show-mobile-menu')) {
+      mobileMenu.classList.remove('show-mobile-menu');
+  }
+});

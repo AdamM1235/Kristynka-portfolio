@@ -55,6 +55,54 @@ a {
   font-size: large;
 }
 
+.mobile-menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 768px) {
+  .desktop-menu {
+      display: none;
+  }
+
+  .mobile-menu-toggle {
+      display: block;
+  }
+
+  .mobile-menu {
+      display: none;
+      flex-direction: column; /* Zmena na column pre zobrazenie pod sebou */
+      position: absolute;
+      background:none;
+      top: 70px;
+      right: 0;
+      width: 30%;
+      height: 150px;
+      background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .mobile-menu ul {
+      padding: 10px;
+      padding-left: 10%;
+      padding-top: 5%;
+      padding-right: 0;
+  }
+
+  .mobile-menu li {
+      margin-bottom: 15px;
+      display: flex;
+  }
+
+  .show-mobile-menu {
+      display: flex;
+  }
+}
+
 header {
   position: relative;
   height: 100vh;
